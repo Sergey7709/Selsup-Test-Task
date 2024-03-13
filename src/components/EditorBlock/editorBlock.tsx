@@ -17,10 +17,10 @@ export const EditorBlock: FC<Props> = ({ model, params }) => {
 
   const [showParamValues, setShowParamValues] = useState(false)
 
-  const handleInputChange = (paramId: number, index: number, newValue: string) => {
+  const handleInputChange = (id: number, index: number, newValue: number | string) => {
     setParamValues(prevState =>
       prevState.map(paramValue =>
-        paramValue.paramId === paramId
+        paramValue.paramId === id
           ? {
               ...paramValue,
               value: Array.isArray(paramValue.value)
@@ -40,7 +40,7 @@ export const EditorBlock: FC<Props> = ({ model, params }) => {
     <div className={s.wrapperEditorBlock}>
       {params.map(param => (
         <div className={s.wrapperEditorField} key={param.id}>
-          <label>{param.name}</label>
+          <label className={s.labelEditorBlock}>{param.name}</label>
           {param.type === 'string' && (
             <FieldEditor
               handleInputChange={handleInputChange}
