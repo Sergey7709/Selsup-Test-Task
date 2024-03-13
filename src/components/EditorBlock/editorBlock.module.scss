@@ -1,6 +1,8 @@
 
 .wrapperEditorField {
   width: 500px;
+  display: flex;
+  gap:5%
 }
 
 .wrapperEditorBlock {
@@ -8,4 +10,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.labelEditorBlock {
+  flex: 1;
 }
