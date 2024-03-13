@@ -19,11 +19,11 @@ export const FieldEditor: FC<FieldEditorProps> = ({
         valueParam.map((value: number | string, index: number) => (
           <TextField
             key={index}
-            onChange={e =>
+            onValueChange={newValue =>
               handleInputChange(
                 param.id,
                 index,
-                typeof value === 'string' ? e.target.value : Number(e.target.value)
+                typeof value === 'string' ? newValue : Number(newValue)
               )
             }
             type={typeField}
