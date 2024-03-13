@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 
 import { FieldEditor } from '@/components/EditorBlock/fieldEditor'
+import { Button } from '@/components/ui/button'
 import { Model, Param, ParamValue } from '@/pages/dashboard/types.dashboard'
 
 import s from './editorBlock.module.scss'
@@ -70,17 +71,17 @@ export const EditorBlock: FC<Props> = ({ model, params }) => {
           )}
         </div>
       ))}
-      <button onClick={getModel} type={'button'}>
+      <Button fullWidth onClick={getModel} type={'button'}>
         Show Param Values
-      </button>
+      </Button>
       {showParamValues && (
         <ul>
           {paramValues.map(paramValue => (
             <li key={paramValue.paramId}>
               Param ID: {paramValue.paramId}, Value:
               {Array.isArray(paramValue.value)
-                ? `[${paramValue.value.join(', ')}]`
-                : paramValue.value}
+                ? ` [${paramValue.value.join(', ')}]`
+                : ` ${paramValue.value}`}
             </li>
           ))}
         </ul>
