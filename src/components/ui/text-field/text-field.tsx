@@ -15,7 +15,7 @@ export type TextFieldProps = {
   label?: string
   labelProps?: ComponentProps<'label'>
   onValueChange?: (value: string) => void
-  type?: 'password' | 'search' | 'text'
+  type?: 'number' | 'password' | 'search' | 'string'
 } & ComponentPropsWithoutRef<'input'>
 
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
