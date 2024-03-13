@@ -1,8 +1,8 @@
 
 .wrapperEditorField {
-  width: 500px;
+  width: 100%;
   display: flex;
-  gap:5%
+  gap:1%
 }
 
 .wrapperEditorBlock {
@@ -10,8 +10,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 500px;
+  @media (max-width: 560px) {
+    width: 300px;
+  }
 }
 
 .labelEditorBlock {
   flex: 1;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  @media (max-width: 600px) {
+    flex: 2;
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-bold);
+  }
 }
