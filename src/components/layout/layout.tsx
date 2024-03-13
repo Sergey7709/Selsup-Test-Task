@@ -13,7 +13,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         <ThemeMode />
       </header>
 
-      <div>{children}</div>
+      <>{children}</>
     </div>
   )
 }
