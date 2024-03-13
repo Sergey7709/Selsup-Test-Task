@@ -1,4 +1,11 @@
 
-.wrapperEditorBlock {
+.wrapperEditorField {
   width: 500px;
+}
+
+.wrapperEditorBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
