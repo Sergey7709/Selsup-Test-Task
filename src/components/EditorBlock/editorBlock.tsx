@@ -2,6 +2,7 @@ import { FC, useState } from 'react'
 
 import { FieldEditor } from '@/components/EditorBlock/fieldEditor'
 import { Button } from '@/components/ui/button'
+import { Typography } from '@/components/ui/typography'
 import { Model, Param, ParamValue } from '@/pages/dashboard/types.dashboard'
 
 import s from './editorBlock.module.scss'
@@ -39,6 +40,10 @@ export const EditorBlock: FC<Props> = ({ model, params }) => {
 
   return (
     <div className={s.wrapperEditorBlock}>
+      <Typography variant={'body1'}>
+        В решении реализована функциональность передачи не только текстовых данных, но и числовых, а
+        также списков значений, тип которых определяется структурой params и model.
+      </Typography>
       {params.map(param => (
         <div className={s.wrapperEditorField} key={param.id}>
           <label className={s.labelEditorBlock}>{param.name}</label>
