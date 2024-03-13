@@ -17,10 +17,17 @@ export const EditorBlock: FC<Props> = ({ model, params }) => {
 
   const [showParamValues, setShowParamValues] = useState(false)
 
-  const handleInputChange = (paramId: number, newValue: string) => {
+  const handleInputChange = (paramId: number, index: number, newValue: string) => {
     setParamValues(prevState =>
       prevState.map(paramValue =>
-        paramValue.paramId === paramId ? { ...paramValue, value: newValue } : paramValue
+        paramValue.paramId === paramId
+          ? {
+              ...paramValue,
+              value: Array.isArray(paramValue.value)
+                ? paramValue.value.map((v, i) => (i === index ? newValue : v))
+                : newValue,
+            }
+          : paramValue
       )
     )
   }
@@ -52,6 +59,15 @@ export const EditorBlock: FC<Props> = ({ model, params }) => {
               typeField={'number'}
             />
           )}
+          {param.type === 'list' && (
+            <FieldEditor
+              handleInputChange={handleInputChange}
+              label={param.name}
+              param={param}
+              paramValues={paramValues}
+              typeField={'string'}
+            />
+          )}
         </div>
       ))}
       <button onClick={getModel} type={'button'}>
@@ -61,7 +77,10 @@ export const EditorBlock: FC<Props> = ({ model, params }) => {
         <ul>
           {paramValues.map(paramValue => (
             <li key={paramValue.paramId}>
-              Param ID: {paramValue.paramId}, Value: {paramValue.value}
+              Param ID: {paramValue.paramId}, Value:
+              {Array.isArray(paramValue.value)
+                ? `[${paramValue.value.join(', ')}]`
+                : paramValue.value}
             </li>
           ))}
         </ul>
