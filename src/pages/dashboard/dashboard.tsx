@@ -1,4 +1,5 @@
 import { EditorBlock } from '@/components/EditorBlock'
+import { ScrollToTopButton } from '@/components/ui/scroll-to-top-button/scroll-to-top-button'
 import { Typography } from '@/components/ui/typography'
 import {
   modelNumber,
@@ -10,7 +11,6 @@ import {
 } from '@/pages/dashboard/constants.dashboard'
 
 import s from './dashboard.module.scss'
-import { ScrollToTopButton } from "@/components/ui/scroll-to-top-button/scroll-to-top-button";
 
 export const Dashboard = () => {
   return (
