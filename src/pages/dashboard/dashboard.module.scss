@@ -1,5 +1,36 @@
 .wrapper_panel {
   display: flex;
-  gap: 10px;
-  align-items: end;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.wrapper_header_typography {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin-bottom: 20px;
+  padding: 5px;
+
+  @media (max-width: 540px) {
+    font-size: var(--font-size-s);
+    width: 300px;
+  }
+}
+
+.header_typography {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  text-align: justify;
+
+  @media (max-width: 540px) {
+    font-size: var(--font-size-m);
+    text-align: start;
+    }
+}
+
+.title_typography {
+  color: var(--color-success-500);
 }
