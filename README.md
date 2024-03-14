@@ -8,7 +8,8 @@
 ## Tools
 [![Built with Vite](https://img.shields.io/badge/Built_with-Vite-646cff?logo=vite)](https://vitejs.dev/)
 
-☝ Проект развернут и доступен по адресу: 
+☝ Проект развернут и доступен по адресу: https://selsup-test-task.vercel.app/
+
 
 ## Install
 
@@ -23,7 +24,7 @@
 
 - Клонируйте репозиторий приложения.  
 - Откройте терминал и выполните команду:  
-✅ git clone git@github.com:Sergey7709/ValantisJewelry.git
+✅ git clone git@github.com:Sergey7709/Selsup-Test-Task.git
 
 - Установите зависимости проекта с помощью pnpm:  
 ✅ pnpm install
