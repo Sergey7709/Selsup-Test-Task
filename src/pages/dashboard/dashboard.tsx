@@ -25,13 +25,13 @@ export const Dashboard = () => {
       </Typography>
       <EditorBlock model={modelString} params={paramsString} />
       <Typography className={s.title_typography} variant={'subtitle1'}>
+        Пример числовых данных
+      </Typography>
+      <EditorBlock model={modelNumber} params={paramsNumber} />
+      <Typography className={s.title_typography} variant={'subtitle1'}>
         Пример списка текстовых данных
       </Typography>
       <EditorBlock model={modelStringArray} params={paramsStringArray} />
-      <Typography className={s.title_typography} variant={'subtitle1'}>
-        Пример списка числовых данных
-      </Typography>
-      <EditorBlock model={modelNumber} params={paramsNumber} />
     </div>
   )
 }
