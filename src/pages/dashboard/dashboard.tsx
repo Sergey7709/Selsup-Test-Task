@@ -10,6 +10,7 @@ import {
 } from '@/pages/dashboard/constants.dashboard'
 
 import s from './dashboard.module.scss'
+import { ScrollToTopButton } from "@/components/ui/scroll-to-top-button/scroll-to-top-button";
 
 export const Dashboard = () => {
   return (
@@ -32,6 +33,7 @@ export const Dashboard = () => {
         Пример списка текстовых данных
       </Typography>
       <EditorBlock model={modelStringArray} params={paramsStringArray} />
+      <ScrollToTopButton />
     </div>
   )
 }
