@@ -1,5 +1,5 @@
 import { Layout } from '@/components/layout'
-import { Dashboard } from '@/pages/dashboard/dashboard'
+import { Dashboard } from '@/pages/dashboard'
 
 function App() {
   return (

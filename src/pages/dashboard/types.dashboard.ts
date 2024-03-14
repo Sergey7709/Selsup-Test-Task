@@ -1,20 +1,27 @@
-export type PaginationParams = {
-  limit: number
-  offset: number
+type ParamType = 'list' | 'number' | 'string'
+export interface Param {
+  id: number
+  name: string
+  type: ParamType
 }
 
-export type FilterParams = { brand: string } | { price: number } | { product: string }
-
-type AllKeys<T> = T extends any ? keyof T : never
-export type KeysFilterParams = AllKeys<FilterParams>
-
-export type AxiosParams = FilterParams | PaginationParams
-
-export type ResponseData = { result: string[] }
-
-export type StateType = {
-  action: string
-  limit: number
-  page: number
-  params: AxiosParams
+export interface ParamValue {
+  paramId: number
+  value: (number | string)[] | number | string
 }
+
+export interface Model {
+  paramValues: ParamValue[]
+}
+
+export type FieldEditorProps = {
+  handleInputChange: (id: number, index: number, newValue: number | string) => void
+  label: string
+  param: Param
+  paramValues: ParamValue[]
+  typeField: 'number' | 'string'
+}
+
+export type SelectorEditorProps = {
+  model: Model
+} & Omit<FieldEditorProps, 'label' | 'typeField'>

@@ -49,7 +49,7 @@
 .primary {
   @include button-base;
 
-  background: var(--color-accent-500);
+  background: var(--color-info-500);
   box-shadow: 0 0.25rem 1.125rem 0 rgb(140 97 255 / 35%);
 
   &:disabled,
@@ -57,16 +57,16 @@
     cursor: not-allowed;
     color: var(--color-light-900);
     opacity: 0.7;
-    background: var(--color-accent-900);
+    background: var(--color-info-900);
   }
 
   &:hover:not(:disabled) {
-    background: var(--color-accent-300);
+    background: var(--color-info-300);
     transition: background-color 0.4s;
   }
 
   &:active:not(:disabled) {
-    background: var(--color-accent-700);
+    background: var(--color-info-700);
   }
 }
 
