@@ -1,4 +1,5 @@
 import { EditorBlock } from '@/components/EditorBlock'
+import { ScrollToTopButton } from '@/components/ui/scroll-to-top-button/scroll-to-top-button'
 import { Typography } from '@/components/ui/typography'
 import {
   modelNumber,
@@ -32,6 +33,7 @@ export const Dashboard = () => {
         Пример списка текстовых данных
       </Typography>
       <EditorBlock model={modelStringArray} params={paramsStringArray} />
+      <ScrollToTopButton />
     </div>
   )
 }
